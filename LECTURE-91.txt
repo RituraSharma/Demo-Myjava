@@ -1,0 +1,48 @@
+////////////////////////////LECTURE-91, 2-AUG////////////////////////////////////
+package com.company;
+
+//import jdk.internal.icu.text.UnicodeSet;
+
+import java.util.*;//isse java util k ander k sare access ho jyenge
+
+public class first {
+    public static void main(String[] args) {
+        ArrayList<Integer>l1=new ArrayList<>();//jo array list h vo integer k array list bana chae rhe h,
+        //ArrayList<Integer>l1=new ArrayList<>(5);//initial capcity set kr skte h aab 5 set krdi
+        ArrayList<Integer>l2=new ArrayList<>();
+        l2.add(100);
+        l2.add(123);
+        l2.add(111);
+        l2.add(121);
+        l1.add(6);//list m insert krne k liye use void add(int index, E element)
+        l1.add(5);
+        l1.add(9);
+        l1.add(5);
+        l1.add(4);
+//        l1.add(0,55);//0th index par 55 add kr dega 6 ko hata k
+//        l1.add(3,75);//3rd index par 75 add kr dega  9 ko hta k
+//        l1.add(3,88);//ye 75 se phle 3rd index par print ho jyega phle 88 ayega fir 75
+
+//        l1.addAll(l2);//l2 list ko l1 k end m add krdega
+//        l1.addAll(0,l2);//l2  list ko l1 k start m add krdega
+        //l1.clear();//l1 k sare elements ko clear krdega
+        //clone() method copy return krega
+        //System.out.println(l1.contains(7));//kya 7 present h l1 m ye nhi
+        //ensureCapacity() array list ki capacity incre.krne k liye
+//        System.out.println(l1.indexOf(7));//-1 print krega kuki 7 nhi h
+//        System.out.println(l1.indexOf(4));//4 kiss index par h vo print krega,agr 4 2 var repeat ho rhe hoga to phle vale index ko print krega
+//        System.out.println(l1.lastIndexOf(4));//4 value ki last index k bare m bta rhe h
+        l1.remove(0);//index 0 par jo h usko remove kr dega
+        l1.set(1,566);//ye 1 index par  jo 5 h uski jagha 566 print kr dega
+        for(int i=0;i<=l1.size();i++){//L1 length kr k nhi size kr k array list tk print kregi
+//            //System.out.println(L1[i]);//L1 EK array nhi h ase print nhi hoga
+//            System.out.println(l1.get(i));//get method se print krenge
+               System.out.print(l1.get(i));
+               System.out.print(", ");
+               // Integer l1Array=l1.toArray(l1.size());
+        }
+    }
+}
+
+
+

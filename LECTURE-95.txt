@@ -1,0 +1,20 @@
+//////////////////////LECTURE-95//////////////////
+package com.company;
+
+import java.util.HashSet;
+
+public class first {
+    public static void main(String[] args) {
+        HashSet<Integer>myHashset=new HashSet<>();//by using--HashSet() constructor,initial capacity by default 16 tk milegi and load factor 0.75
+        HashSet<Integer>myHashset2=new HashSet<>(6,0.5f);//initial capacity and load factor dono yha dal skte ho 0.5 k baad 'f' bhi lagana kuki float h
+        myHashset.add(7);
+        myHashset.add(77);
+        myHashset.add(78);
+        myHashset.add(79);
+        
+        System.out.println(myHashset);
+    }
+}
+
+
+

@@ -1,0 +1,30 @@
+////////////////////LECTURE-70//////////////////////////////////////
+package com.company;
+class Mythread1 extends Thread{
+    public void run(){//run method hi lene pdega
+        int i=0;
+        while(i<40){
+            System.out.println("this is cooking thread");
+            i++;
+        }
+
+    }
+}
+class  Mythread2 extends Thread{
+    public void run(){
+        int i=0;
+        while(i<40) {
+            System.out.println("this is thread for chatting");
+            i++;
+        }
+    }
+}
+
+public class thread1_lec_70 {
+    public static void main(String[] args) {
+        Mythread1 obj1=new Mythread1();
+        Mythread2 obj2=new Mythread2();
+        obj1.start();//thread ko start krne k liye start method likh ne padte h run method isliye nhi chleye kuki start method internally run method ko call kr lete h ye saari chije Thread.java k ander h jise k ander nhi jana h
+        obj2.start();
+    }
+}

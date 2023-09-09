@@ -1,0 +1,24 @@
+//////////////////////////////////LECTURE-106/////////////////////////
+package com.company;
+/**
+ * This class is to demonstrate what javadoc is and how it is used in the java industry
+ * THis is <i>italilc</i> word<p>this is new paragraph</p>
+* @author Harry (codeWithHarry)
+* @version 0.1 //class k version
+ * @since 2002// kbse mtlb kbse use m aa rhi h
+ * @see <a href=https://docs.oracle.com/en/java/javase/17/" target="_blank></a>Java Docs
+ */
+//....Only try to write java docs on write i repeat only try to write not write,ye package k niche aayega vrne error
+//IMP.--agr java doc comment class k uper likhe h to class ki baat kar rhe h agr  java doc comment method k uper likhe h to method ki baat kar rhe h
+import java.util.Scanner;
+//tag class k uper dalne h package k uper nhi
+
+         public class first {
+             public void add(int a,int b){
+                 System.out.println("the sum is:"+a+b);
+             }
+            public static void main(String[] args) {
+
+            }
+}
+//ye program bnane k baad go to tools->generate docs->click settings(see in video)-->click 'OK'

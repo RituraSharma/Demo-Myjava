@@ -1,0 +1,39 @@
+////////////////////////////////LECTURE-81/////////////////////
+
+package com.company;
+
+import java.util.Scanner;
+
+public class thread1_lec_70 {
+    public static void main(String[] args){
+         int arr []={1,2,3,4};
+        System.out.println("which array index you want to divide:");
+        Scanner ssc=new Scanner(System.in);
+        int index= ssc.nextInt();
+
+        System.out.println("from which number you want to divide the array");
+        Scanner sc=new Scanner(System.in);
+        int num= sc.nextInt();
+
+        try {
+            System.out.println("index no is"+arr[index]);//ye line yha ayegi uper nhi
+            System.out.println("the division is:"+arr[index]/num);
+        }
+        /*catch (Exception e){//ye array_index and number glt dalne par bta to dega error h but ye nhi btyega ki konse kaam mne glt kiye h
+            System.out.println("Exception found reason");
+            System.out.println(e);
+        }*/
+        catch (ArrayIndexOutOfBoundsException e){//ye reason print krega
+            System.out.println("ArrayIndexOutOfBoundsException occured:");
+            System.out.println(e);
+        }
+        catch (ArithmeticException e){//ye reason print krega
+            System.out.println("ArithmeticException occured:");
+            System.out.println(e);
+        }
+        catch (Exception e){//by chance kuch dusri exception aa jati h to ye execute
+            System.out.println("exception found other reason");
+            System.out.println(e);
+        }
+    }
+}

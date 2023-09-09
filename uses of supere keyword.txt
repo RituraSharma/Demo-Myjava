@@ -1,0 +1,66 @@
+///////////////////////USES OF SUPER KEYWORD///////////////////////////////
+package com.company;
+class vechile{
+    public void startEngine(){
+        System.out.println("engine start");
+    }
+}
+class car extends vechile{
+    public void stepToStartEngine(){
+        super.startEngine();;
+        System.out.println("Start the engine");
+    }
+}
+public class thread1_lec_70 {
+    public static void main(String[] args){
+        car obj=new car();
+        obj.stepToStartEngine();
+
+    }
+
+}
+////////////////////////////////////SECOND EXAMPLE OF SUPER KEYWORD/////////////////////
+package com.company;
+//Invokes k mtlb h ki bulana ye bulate hain
+class parent{
+    int a=55;
+}
+//super keyword k use parent class k kisi member ko access krne k liye krte jb hmre pass parent class k variable k naam bhi same ho local variable k  or child class k variable k naam bhi same ho
+class  child extends parent{
+    int a=45;
+    public void name(){
+        int a=6;
+        System.out.println(a);//ye method k ander jo 'a' h vo print krega
+        System.out.println(this.a);//class k variable ko print krega but same class k variable 6 same class k variable m h
+        System.out.println(super.a);//dusre class k variable ko print krega
+    }
+}
+public class thread1_lec_70 {
+    public static void main(String[] args){
+        child obj=new child();
+        obj.name();
+    }
+
+}
+////////////////////////////////THIRD EXAMPLE OF SUPER KEYWORD////////////////////////////
+package com.company;
+class person{
+    String name;
+    person(String name){
+        this.name=name;
+    }
+}
+class  student extends person {
+    int id;
+     student(String name,int id){
+        super(name);
+        this.id=id;
+         System.out.println(name+id);
+    }
+}
+public class thread1_lec_70 {
+    public static void main(String[] args) {
+        student obj = new student("ranhul",5);
+    }
+}
+//////////////////QUESTION FORM CHATGPT///////////

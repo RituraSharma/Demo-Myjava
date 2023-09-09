@@ -1,0 +1,43 @@
+////////////////////////////////LECTURE-107_____7-AUG//////////////////////////////////
+package com.company;
+
+/**
+ * This is good class
+ * <p>This is the paragraph</p>
+ */
+public class first {
+    /**
+     * @param args These are arguments supplied to the command lines
+     */
+    public static void main(String[] args) {
+        System.out.println("I am main method");
+    }
+
+    /**
+     * Heelo this is the method and this is the most beutyfull method of this class
+     * @param z This is the first number to add
+     * @param x This is the second number to add
+     * @return Sum of two numbers as an two integer
+     * @throws Exception if z is 0
+     * @deprecated this method is deprecated please use + operator
+     */
+//    public  int add(int z,int x){
+//                 int c;
+//                 c=z+x;
+//                 return  c;
+//             }
+    public int add(int z, int x) throws Exception {
+        if (z == 0) {
+            throw new Exception();
+        }
+
+        int c;
+        c = z + x;
+        return c;
+    }
+}
+
+//--IMPORTANT->/*{mean single slash and single star} is normal  comment but if we use /**{mean double slash and double star} is comment for javadoc
+/*line no.5 is use for parameter, Line no.12 is for Description
+
+ */

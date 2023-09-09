@@ -1,0 +1,14 @@
+////////////////////////////////LECTURE-96,4-AUG////////////////////////
+package com.company;
+//LECTURE-96
+public class first {
+    public static void main(String[] args) {
+        System.out.println(System.currentTimeMillis());//ye no.change hote hi rhete h ye milliseconds btate h jo ki beet chuke h since 1-jan-1970
+        System.out.println(System.currentTimeMillis()/1000);//ye second btyega since 1 jan 1970
+        System.out.println(System.currentTimeMillis()/1000/3600);//ye minute btyega since 1 jan 1970
+        System.out.println(System.currentTimeMillis()/1000/3600/24/365);//ye year  btyega since 1 jan 1970
+    }
+}
+
+
+

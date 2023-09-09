@@ -1,0 +1,39 @@
+/////////////////////////////LECTURE-82/////////QUICK QUIZ/////////
+package com.company;
+
+import java.util.Scanner;
+
+public class thread1_lec_70 {
+    public static void main(String[] args) {
+        int  [] arr={44,55,66,88};
+        boolean f=true;
+        while (f){//jab tk chal te rhe tab tk index and jise divide kr rhe ho vo shi na ho
+            System.out.println("enter the array index");
+            Scanner sc=new Scanner(System.in);
+            int arr_ind= sc.nextInt();
+            System.out.println("your enter array index is:"+arr_ind);
+            System.out.println("from which number you want to divide:");
+            Scanner ssc=new Scanner(System.in);
+            int num= ssc.nextInt();
+            try{
+                System.out.println("level 1 start");
+                try{
+                    System.out.println("your index value number is:"+arr[arr_ind]);
+                    f=false;//ye yha ku kiye
+                    System.out.println("result is:"+arr[arr_ind]/num);
+                }
+                catch (Exception e){
+                    System.out.println("error found");
+                    System.out.println(e);
+                }
+            }
+            catch (Exception e){
+                System.out.println("level 2 exception");
+            }
+        }
+
+        System.out.println("end the progrram");
+    }
+}
+//ye program end tk chle bich m Exception aaye glt entry dalne par bhi with the help of try catch vo exception  k reason
+//bta kr aage program run kr gye yhi fyada h try and catch k

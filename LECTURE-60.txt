@@ -1,0 +1,81 @@
+///////////////////LECTURE-60 QUESTION 3,5 FOCUS ON POLYMORPHISM  25-AUG-23 9:30PM
+package com.company;
+import java.util.Scanner;
+class monkey{
+    public void jump(){
+        System.out.println("monkey jump");
+    }
+    public void bite(){
+        System.out.println("monkey bite");
+    }
+}
+interface basicAnimals{
+    void eat();
+    void sleep();
+}
+class  humans extends monkey implements basicAnimals{
+    public void speak(){
+        System.out.println("human speaks");
+    }
+    public void eat(){
+        System.out.println("basic Animals eat");
+    }
+    public void sleep(){
+        System.out.println("basic Animals sleep");
+    }
+}
+public class practice3 {
+    public static void main(String[] args) {
+        //question 3
+        humans obj=new humans();
+        obj.speak();
+        obj.jump();
+        obj.bite();
+        obj.eat();
+        obj.sleep();
+        //question 5  --POLYMORPHISM START
+        monkey obj2=new humans();
+        //obj2.speak();--->cannot use speak method because the reference is monkey which does not have speak method & monkey m sirf jump and bite method h vo hi run ho krenge halaki object to humans k h but apne kha h ye ek monkey h to sirf monkey k method run
+        obj2.bite();
+        obj2.jump();
+        basicAnimals obj3=new humans();
+        //obj3.speak();--->cannot use speak method because the reference is basicAnimals which does not have speak method & basicAnimals m sirf eat and sleep method h vo run krenge
+        obj3.eat();
+        obj3.sleep();
+
+    }
+}
+
+////////////////////////QUESTION-4//////////////
+package com.company;
+import java.security.spec.RSAOtherPrimeInfo;
+import java.util.Scanner;
+//QUESTION--4
+abstract class telephone{
+    abstract void ring();
+    abstract void lift();
+    abstract void disconnect();
+}
+class smartTelephone extends telephone{
+    public void start(){
+        System.out.println("start smartTelephone class");
+    }
+    public void ring(){
+        System.out.println("Ringing......");
+    }
+    public void lift(){
+        System.out.println("phone lifting");
+    }
+    public void disconnect(){
+        System.out.println("phone is disconnect");
+    }
+}
+public class practice3 {
+    public static void main(String[] args) {
+        telephone  obj=new smartTelephone();//SHOW POLYMORPHISM
+        obj.ring();
+        obj.lift();
+        obj.disconnect();
+        //obj.start();----GIVE ERROR
+    }
+}

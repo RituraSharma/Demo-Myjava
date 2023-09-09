@@ -1,0 +1,53 @@
+////////////////////////////////////LECTURE-111_____7-AUG/////////////
+package com.company;
+//LECTURE-111
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.lang.module.InvalidModuleDescriptorException;
+import java.util.Scanner;
+
+public class thread1_lec_70 {
+    public static void main(String[] args) {
+        //create a new file
+        /*File myFile=new File(pathname:"thread_lec_70");
+        try{
+            myFile.createNewFile();
+        }catch (IOException e){
+            System.out.println("unable to create this file");
+            e.printStackTrace();
+        }*/
+
+        //code ot write to a file
+        /*try{
+            FileWriter fileWriter=new FileWriter("thread1_lec_70.txt");
+            fileWriter.write("this is our first file free this java course \n Ok now by");
+            fileWriter.close();//file close krne jruri ho
+        }catch (IOException e){
+            e.printStackTrace();
+        }*/
+
+        //Reading a file{mean console output show krega}
+        /*File myFile=new File("thread1_lec_70.txt");
+        try {
+            Scanner sc=new Scanner(myFile);//try catch m surrounde krne pdega kuki agr exception aagyi too without try catch error dega,
+//line 33 myFile ki jaghe chaho to kisi or file ko bhi de skte ho vo file bhi read kr lega
+            while (sc.hasNextLine()){
+                String line=sc.nextLine();
+                System.out.println(line);
+            }
+            sc.close();//jo file aapne open kr rkhi h for read vo close kr dii
+        } catch (FileNotFoundException e) {
+            throw new RuntimeException(e);
+        }*/
+        //Deleting a  file
+        File myFile=new File("thread1_lec_70.txt");
+        if(myFile.delete()){
+            System.out.println("I have deleted:"+myFile.getName());
+        }
+        else{
+            System.out.println("Some problem occur while deleting the file");
+        }
+    }
+}

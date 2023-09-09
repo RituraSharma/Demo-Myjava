@@ -1,0 +1,64 @@
+///////////////////////////////////////LECTURE-109___7-AUG
+package com.company;
+//LECTURE-109
+//anonymous
+//functional interface ek asse interface hote h jisme keval ek method hote h
+@FunctionalInterface
+interface  DemoAno{//uper functional interface anotation laga diye
+    void meth1(int a);
+   // void meth2();
+}
+//class harryFunc implements DemoAno{//ye assi class h jo ki iss demoano interface ko implement krti h ,ye purane trika h
+//    @Override
+//    public void meth1() {
+//        System.out.println("this is meth1");
+//    }
+//}
+//class AnonyDemo implements DemoAno{
+//    public  void display(){
+//        System.out.println("hello");
+//    }
+//    @Override
+//    public void meth1() {
+//        System.out.println("I am meth1 ");
+//    }
+//    @Override
+//    public void meth2() {
+//        System.out.println("I am meth2 ");
+//    }
+//}
+public class first {
+    public static void main(String[] args){
+//        AnonyDemo obj=new AnonyDemo();
+//        DemoAno obj=new AnonyDemo();//DemomAno k reference leliye jiss se haam DemoAno k method ko call kr skte h
+//        obj.meth1();
+//without using class
+//        DemoAno obj=new DemoAno(){//interface k variable bna liye fir kha isko ek object bna lo jo ki m bnate ek dusri class bna kr lkin aab mujhe vo class banane ki jrurt nhi padi
+//            @Override
+//            public void meth1() {
+//                System.out.println("I am meth1 ");
+//            }
+//
+//            @Override
+//            public void meth2() {
+//                System.out.println("I am meth2 ");
+//            }
+//        };
+//        obj.meth1();//ye DemoAno k neche vale meth1 ko run kr rhe h
+//        obj.meth1();//ye DemoAno k neche vale meth2 ko run kr rhe h
+//LAMBDA EXPRESSIONS
+//          DemoAno obj=new harryFunc();
+//          obj.meth1();
+//        DemoAno obj=()->{System.out.println("I am method 1 from this Lamda ");};
+//        obj.meth1();
+        DemoAno obj=(a)->{System.out.println("I am method 1 from this Lamda "+a);};//int a vgre isliye nhi likhe kuki functionalinterface k ander ek hi method hote h
+        obj.meth1(6);
+    }
+}
+/*anonymous class ek actual class to nhi h but uske bad bhi ek class h ,
+Why use anonymous class?
+aapko koi kaam jisme aapko sirf ek object bane h to uske liye puri class nhi  bnani pade to isliye anonymous class use krte h class ki place par
+apko sirf ek bar class ki need h fir usse koi naata nhi rkhne h to aap asse kar skte ho
+anonymous isme turant declare kiye or turant instantiate kr diye mean vhi object bna kr turant kaam ho gye
+
+ */

@@ -1,0 +1,52 @@
+///////////////////////////////////////LECTURE-85____2-AUG////////////////////////////////
+package com.company;
+public class first {
+//    public static int greet(){
+//        try{
+//            int a=44;
+//            int b=0;
+//            int c=a/b;
+//            return c;//agr apki exception occur nhi hoti h to 'c' return ho jyega but agr exception occur hoti h to
+//        }
+//        catch (Exception e){
+//            System.out.println(e);
+//        }
+//        finally {
+//            System.out.println("this is the end of this function");
+//        }
+//        return 0;//return use in case try k ander nhi jate to
+//    }
+    public static void main(String[] args){
+       // int k=greet();
+        //System.out.println(k);
+        int a=7;
+        int b=9;
+        while (true){
+            try {
+                int c=a/b;
+                System.out.println(c);
+            }
+            catch (Exception e){
+                System.out.println(e);
+                break;//exception aaye value 0 hote hi tab catch run hua or exception print kre halaki break lga rkha h tb bhi finally k ander k code execute hua chae kuch bhi kro finally execute hoga hi hoga
+            }
+            finally {
+                System.out.println("I am finally for value of b:" + b);//chae return kro ye break ye execute hoga hi hoga
+            }
+            b--;
+        }
+        try {//try k sth catch use na kre finally this is valid code use sirf itne anter exception aane par error dega kuki catch use kr k handle nhi kre but tab bhi finally execute hoga
+            //System.out.println(20/0);
+            System.out.println(20 / 10);//isme koi error nhi ayega
+        }
+        finally {
+            {
+                System.out.println("yes this is finally ");
+            }
+        }
+    }
+}
+/*first_case(agr koi exception na ho)--try ko execute to kre or usse ki yhi se return ho jyee but tb bhi usne finaly ko execute kiye bcoz finaly k ander the
+agr finally ko hata do to greet se hi return(bcoz aap greet se return ho gye) ho jyega age print nhi krega
+second_case(agr exception ho)--exception dii fir finally wale execute hua fir 0/-1 return kr diye {0/-1 k mtlb kuch ho nhi paye}
+ */

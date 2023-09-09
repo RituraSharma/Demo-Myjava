@@ -1,0 +1,29 @@
+/////////////////////////////////////LECTURE-101///////////////////
+package com.company;
+
+import javax.swing.text.DateFormatter;
+import javax.xml.crypto.Data;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.LocalTime;
+import java.time.chrono.ChronoLocalDateTime;
+import java.time.format.DateTimeFormatter;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.GregorianCalendar;
+import java.util.TimeZone;
+//GOOGLE -->JAVA14DOCS--->datetimeformater ---isse sab kuch mil jyega
+//LECTURE-100
+public class first {
+    public static void main(String[] args) {
+        LocalDateTime dt=LocalDateTime.now();//dt datetime object h jo ki date time print krega 2010-01-01T00:22:54.701198900 iss formate m print krega jo ki default the,{ye date h}
+        System.out.println(dt);//ye date time dedega
+        DateTimeFormatter df=DateTimeFormatter.ofPattern("dd-MM-yyyy|| --E");//iski help se asse formate m print kr dega date,{ye formatter h},ye E day of week btyega
+        String myDate=dt.format(df);//ye string object bnane h jo ki line-18 ki date ko line 20 ki formate(yani df vale formate m) m lade
+        System.out.println(myDate);
+        DateTimeFormatter df2=DateTimeFormatter.ISO_LOCAL_DATE;//ISO_LOCAL_DATE--is formate m print krega
+        String myDate2=dt.format(df2);
+        System.out.println(myDate);
+    }
+}
+

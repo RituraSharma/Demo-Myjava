@@ -1,0 +1,50 @@
+///////////////////////////////LEACTURE-86/////////////////////////////
+//////QUESTION-3-START///////////////& ///QUESTION-4-START ALSO INCLUDE
+package com.company;
+
+import java.util.Scanner;
+
+/*{class max_retries extends  Exception{
+    @Override
+    public String toString() {
+        return "maximum retries reached.....";
+    }
+}----->ye vale part QUESTION-4 K H issi program include h*/
+
+public class first {
+    public static void main(String[] args) {
+        int[] arr = {11, 22, 33, 44};
+        int arr_ind;
+        //System.out.println("enter the index:");
+        boolean f = true;
+        int i=0;
+        Scanner sc=new Scanner(System.in);
+        int index;
+        while (f && i<5){//ye while k ander vale smj nhi aaye
+            try {
+                System.out.println("enter the value of index:");
+                index = sc.nextInt();
+                System.out.println("the value of marks:" + arr[index]);
+                break;
+            }
+            catch(Exception e){
+                System.out.println(e);
+                i++;
+            }
+        }
+        if(i>=5){
+            System.out.println("error");
+        }
+	 /*if(i>=5){
+            max_retries obj=new max_retries();
+            //obj.toString();--->asse nhi print krega sout k ander rkhne pdega like line no.37
+            System.out.println(obj.toString());
+        }---->ye vale part bhi QUESTIN-4 K H */
+
+    }
+}
+
+////////////QUESTION-5//////PENDING
+
+
+

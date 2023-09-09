@@ -1,0 +1,26 @@
+//////////////////////////////////////LECTURE-99/////////////5-AUG.
+package com.company;
+
+import javax.xml.crypto.Data;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.GregorianCalendar;
+import java.util.TimeZone;
+
+//LECTURE-99
+public class first {
+    public static void main(String[] args) {
+        Calendar obj=Calendar.getInstance();
+        System.out.println(obj.getTime());//time mil jyega
+        System.out.println(obj.get(Calendar.DATE));//date print 
+        System.out.println(obj.get(Calendar.SECOND));//second print kara skte
+        System.out.println(obj.get(Calendar.HOUR));//hour print kara skte
+        System.out.println(obj.get(Calendar.HOUR_OF_DAY)+":"+obj.get(Calendar.MINUTE)+":"+obj.get(Calendar.SECOND));//24 hour vale time btyega,obj.get(Calendar.MINUTE) ye minute btyega,obj.get(Calendar.SECOND) ye second btyega
+        GregorianCalendar cal=new GregorianCalendar();
+        System.out.println(cal.isLeapYear(2020));//kya 2020 ek leap year h ye bta dega, give o/p true kuki 2020 ek leap year h
+        System.out.println(TimeZone.getAvailableIDs()[0]);//Africa/Abidjan
+        System.out.println(TimeZone.getAvailableIDs()[1]);//Africa/Accra
+        System.out.println(TimeZone.getAvailableIDs()[2]);//Africa/Addis_Ababa...ye teeno timezone bta rhe h 
+    }
+}
+

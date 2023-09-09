@@ -1,0 +1,31 @@
+////////////////////////////////////LECTURE-108___7-SEP
+package com.company;
+//LECTURE-108
+
+import javax.annotation.processing.SupportedSourceVersion;
+@FunctionalInterface
+interface myfunctionalInterface{
+    void thisMethod();
+    //void thisMethod2();//ek jagha aap khe rhe ho ki ye interface h or ek jgaha aap hi two method daal rhe ho---give error
+}
+
+class NewClass {
+     //@Override
+    public void showTime(){
+        System.out.println("time is 8pm");
+    }
+    @Deprecated
+    public int sum(int a,int b){
+        int c=a+b;
+        return c;
+    }
+}
+public class first {
+    @SuppressWarnings("Deprecation")//ye warnings remove kr dega
+    public static void main(String[] args){
+        NewClass obj=new NewClass();
+        obj.showTime();
+        obj.sum(5,4);
+    }
+}
+//program run krne k baad build p jake warnings dekh skte h

@@ -1,0 +1,117 @@
+////////////////////////LEACTURE--66  26-AUG-23  11:45PM
+package com.company;
+class c{
+    public int x=1;
+    protected int y=2;
+    int z=3;
+    private int a=4;
+    public void meht3(){
+        System.out.println(x);
+        System.out.println(y);
+        System.out.println(z);
+        System.out.println(a);
+    }
+}
+public class leacture66 {
+    public static void main(String[] args) {
+        c obj=new c();
+        //obj.meht3();
+//same class k ander koi bhi modifier(public,protected,private,default)laga ho aap log isstamal kr skte h
+        System.out.println(obj.x);
+        System.out.println(obj.y);
+        System.out.println(obj.z);
+        //System.out.println(obj.a);
+//same package h com.company to ham private modifier ko chor k sare modifier use kr skte h
+    }
+}
+///CLASS AND PACKAGE YHA KHATM H 
+//////////////////////////////////////////WORLD//////////////////////////
+package codewithritik.swim;
+
+public class ritikSwim{
+    public int x=1;
+    protected int y=2;
+    int z=3;
+    private int a=4;
+    public void meth1(){
+        System.out.println(x);
+        System.out.println(y);
+        System.out.println(z);
+        System.out.println(a);
+    }
+    public static void main(String[] args) {
+        System.out.println("swim with ritik");
+    
+    }
+}
+//step1-public se leke sout(a) tk copy kre intellij se step2- command dii javac -d . *java jise package ban jye
+................................................................................
+//package codewithritik.swim;
+import codewithritik.swim.ritikSwim;
+
+
+public class usingPackage{
+    public static void main(String[] args) {
+        System.out.println("i am using packages");
+        ritikSwim obj= new ritikSwim();
+        System.out.println(obj.x);
+        System.out.println(obj.y);
+        System.out.println(obj.z);
+    }
+    
+}
+//step3-intellij k main sout x se z tk copy and paste here step4-aab compile krenege javac usingPackage.java se 
+//hame error dekhenge ki  aap different package m h to (1st_error) "y" ek protected access and "z" ek
+// default h to  app "y"and "z" use nhi kr skte even aap "a" private bhi access nhi kr skte aap sirf public access kr skte
+//---------____________________________________________________________________________
+
+///////////////////////////////////SUBCLASSES////////////////////////////////
+//package codewithritik.swim;
+import codewithritik.swim.ritikSwim;
+class Using extends ritikSwim{
+    public void meth2(){
+        System.out.println(x);
+        System.out.println(y);
+        // System.out.println(z);
+        // System.out.println(a);
+    }
+}
+
+
+public class usingPackage{
+    public static void main(String[] args) {
+        System.out.println("i am using packages");
+        Using obj= new Using();
+        obj.meth2();
+    }
+    
+}
+//step1--sout(x)se 'a'tk kre fir in the method meth2 fir obj se call fir compile with command javac usingPackage.java
+//fir compile k baad 2 error--aap 'z'and 'a'ko use nhi kr skte aap default and public memebers ko use kr skte ho
+//uske liye 'z'and 'a'vale ko comment kro fir javac usingPackage.java command without error compile ho jyega fir 
+//java usingPackage.java command k use kr k execute ho jyega 
+//****Using ritikSwim ki subclass h mean yha subclass using h usme sirf public and protected use kr skte ho
+//using(subclass) k ander se ritikSwim k 'x' public and 'y' protected use kr skte ho
+//.................................................................................
+package codewithritik.swim;
+
+public class ritikSwim{
+    public int x=1;
+    protected int y=2;
+    int z=3;
+    private int a=4;
+    public void meth1(){
+        System.out.println(x);
+        System.out.println(y);
+        System.out.println(z);
+        System.out.println(a);
+    }
+    public static void main(String[] args) {
+        System.out.println("swim with ritik");
+    
+    }
+}
+//step1-public se leke sout(a) tk copy kre intellij se step2- command dii javac -d . *java jise package ban jye
+
+
+//

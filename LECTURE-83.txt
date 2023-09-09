@@ -1,0 +1,69 @@
+///////////////////////////LECTURE-83-----VERY TYPICAL/////////
+package com.company;
+import java.util.Scanner;
+/*class myexception extends Exception{//declare exception class
+    @Override
+    public String toString() {//String toString() method ko override kiye h
+        //return super.toString()+ "i am toString";ye
+        return "i am toSting";//m nhi chate  super.toString() super class k message jo h vo run ho
+    }
+
+    @Override
+    public String getMessage() {//String getMessage() ko override kiye h
+        //return super.getMessage()+  "i am get message";//ye wali exception class h uske super.getMessage() isne null message return kre
+        return "i am get message";//m nhi chate super.getMessage() super class k message jo h vo run ho
+    }
+}*/
+public class thread1_lec_70 {
+    public static void main(String[] args) {
+        int a;
+        System.out.println("enter the value or age of a:");
+        Scanner sc=new Scanner(System.in);
+        a= sc.nextInt();
+          /*if(a<9){//agr 'a' enter kiye vo 9 se chota h to aap exception ko throw krenge agr aap exception ko throw kr rhe h to aap usse try catch m dalenge
+            try{
+                //throw new myexception();
+                throw new ArithmeticException("this is an arithmeticException");//isse haam arithmeticException k liye bhi kar skte h
+            }
+            catch (Exception e){
+                System.out.println(e.getMessage());//ye daal te hi uper jo exception class h , ye getMessage() run kre ja rhe h
+                System.out.println(e.toString());// agr toString ko run krunga
+                System.out.println(e);//agr sirf e likh du to sirf toString vale message run hoga
+                // toString() run hote h jab aap sout m directly 'e' daal dete ho like line no.30 ye fir line 29 ki thre bhi
+                //run kr skte ho getMessage jab run hoga tab aap isko run krego like line 28
+                e.printStackTrace();//this is help to find ki konse error konse line m aaye h more helpful in big progrrame--jyede ache se smj nhi aaye
+                System.out.println("finish");
+            }
+        }*/
+        /*try{
+            if (a>125){
+                throw new myageException();
+            } else if (a<0) {
+                throw new myageException();
+            }
+            else {
+                System.out.println("Age is valid");
+            }
+            catch(Exception e){
+
+            }
+        }aase kuch dikhe rkhe h in chatgpt m but error nhi chal rhe*/
+        System.out.println("final finish");
+
+    }
+}
+//* kisi exception ko throw kiye to try and catch se usse surround krne pdega vrne error
+/*READ**IMP.*java ko har ek exception nhi pta like age human ki suppose 125 se jyada nhi ho skti to aap apne exception class
+ bna kr ye baat define kr skte ho or agr koi user age 125 se jyada & negative  dale to exception throw kre or programe vhi ruk jye aap asse nhi kr skte
+uss exception ko handle kru or try and catch se out ho jye or baad k programme run krne lge jisse vo confuse na ho ki
+ pure programme run  na kre or usse search bhi nhi krne pde ki error kha aa rhe h*/
+class myageException extends Exception{
+    public String toString(){
+        return "Above 125 age is not allowed";
+    }
+
+    @Override
+    public String getMessage() {
+        return "Negative age is not allowed";
+    }
+}
